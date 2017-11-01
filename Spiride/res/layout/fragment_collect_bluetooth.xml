@@ -1,0 +1,37 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:orientation="vertical">
+
+     <TextView
+        android:id="@+id/text_bluetooth_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="蓝牙设备列表"
+	/>
+     
+    <Spinner android:id="@+id/spinner_bluetooth_list"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/text_bluetooth_list_title"
+    />
+    
+    <Button
+    	android:id="@+id/btn_bluetooth_connect"
+    	android:layout_width="96sp"
+    	android:layout_height="46sp"
+    	android:layout_below="@id/spinner_bluetooth_list"
+    	android:text="连接"
+    />
+	<Button
+    	android:id="@+id/btn_bluetooth_disconnect"
+    	android:layout_width="96sp"
+    	android:layout_height="46sp"
+    	android:layout_below="@id/spinner_bluetooth_list"
+    	android:layout_alignParentRight="true"
+    	android:text="断开"
+    />
+</RelativeLayout>

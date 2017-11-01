@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.listviewtest.MainActivity" >
+	
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="5sp"
+        
+        android:text=""
+	/>
+	
+    <TextView
+        android:id="@+id/slopeDegreeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentLeft="true"
+        android:textSize="18sp"
+        android:height="32sp"
+        android:text="@string/slope"
+	/>
+    
+    <TextView
+        android:id="@+id/slopePercentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:height="32sp"
+        android:text="@string/slopePercent"
+	/>
+    
+    <TextView
+        android:id="@+id/divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/slopeDegreeText"
+		android:background="#696969"
+	/>
+    
+    <TextView
+        android:id="@+id/slopeDegreeNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slopeDegreeText"
+        android:layout_alignParentLeft="true"
+        android:textSize="66sp"
+        android:textColor="#666666"
+        android:text="--"
+	/>
+    <!--#228B22森林绿色  #FF0000红色  -->
+    <TextView
+        android:id="@+id/slopePercentNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/slopeDegreeText"
+        android:layout_alignParentRight="true"
+        android:textSize="66sp"
+        android:textColor="#666666"
+        android:text="--"
+	/>
+    
+    
+    <Button
+    	android:id="@+id/startupcollect"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/slopeDegreeNum"
+    	android:text="@string/startupcollect"
+    />
+    
+    <Button
+    	android:id="@+id/stopcollect"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/slopeDegreeNum"
+    	android:layout_alignParentRight="true"
+    	android:text="@string/stopcollect"
+    />
+    
+    <TextView
+        android:id="@+id/divide2"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/startupcollect"
+		android:background="#696969"
+	/>
+    
+    <TextView
+        android:id="@+id/blank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:height="32sp"
+        android:layout_below="@id/divide2"
+        android:text=""
+	/>
+    
+    <TextView
+        android:id="@+id/blueToothTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/blank"
+        android:text="@string/blueToothTitle"
+	/>
+    
+    <ListView
+    	android:id="@+id/blueToothList"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_below="@id/blueToothTitle"
+	/>
+    
+    
+    
+</RelativeLayout>

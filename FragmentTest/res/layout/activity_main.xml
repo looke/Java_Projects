@@ -1,0 +1,35 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout  
+        android:id="@+id/content"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:layout_weight="1" />  
+  
+    <RadioGroup
+        android:id="@+id/rg_tab"  
+        android:orientation="horizontal"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:background="@drawable/bg_weibo_listab">  
+  
+        <RadioButton  
+            style="@style/weibo_tab"  
+            android:drawableTop="@drawable/weibolist_attention_selector"  
+            android:text="微博" />  
+  
+        <RadioButton  
+            style="@style/weibo_tab"  
+            android:drawableTop="@drawable/weibolist_atme_selector"  
+            android:text="\@我" />  
+  
+ 
+    </RadioGroup>
+    
+</LinearLayout>

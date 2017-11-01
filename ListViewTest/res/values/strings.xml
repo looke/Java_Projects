@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ListViewTest</string>
+    <string name="title">Slope Panel</string>
+    <string name="action_settings">Settings</string>
+	<string name="newTitle">new Acticity</string>
+    
+    <string name="slope">Degree</string>
+    <string name="slopePercent">Percentage</string>
+	<string name="blueToothTitle">Bluetooth Device List</string>
+    
+	
+	<string name="startupcollect">Start Collection</string>
+	<string name="stopcollect">Stop Collection</string>
+</resources>

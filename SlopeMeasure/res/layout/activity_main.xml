@@ -1,0 +1,448 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.slopemeasure.MainActivity" >
+        
+    <Spinner android:id="@+id/spinner_bluetooth_list"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           
+    />
+    
+    <Button
+    	android:id="@+id/btn_bluetooth_connect"
+    	android:layout_width="96sp"
+    	android:layout_height="39sp"
+    	android:layout_below="@id/spinner_bluetooth_list"
+    	android:text="连接"
+    />
+	<Button
+    	android:id="@+id/btn_bluetooth_disconnect"
+    	android:layout_width="96sp"
+    	android:layout_height="39sp"
+    	android:layout_below="@id/spinner_bluetooth_list"
+    	android:layout_alignParentRight="true"
+    	android:text="断开"
+    />
+    <TextView
+        android:id="@+id/text_bluetooth_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/btn_bluetooth_connect"
+		android:background="#696969"
+	/>
+
+    <!-- ACC角度 -->
+    <TextView
+        android:id="@+id/text_datashow_degree_min"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_bluetooth_divide"
+		android:text="ACC度数最小值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_degree"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_bluetooth_divide"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="ACC度数当前值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_degree_max"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_bluetooth_divide"
+		android:layout_alignParentRight="true"
+		android:text="ACC度数最大值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_degree_minvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_degree_min"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_degree_value"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_degree_min"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_degree_maxvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_degree_min"
+		android:layout_alignParentRight="true"
+		android:text="0.00"
+	/>
+    <TextView
+        android:id="@+id/text_acc_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/text_datashow_degree_minvalue"
+		android:background="#696969"
+	/>
+    
+    
+    <!-- Gyro角速率 -->
+    <TextView
+        android:id="@+id/text_datashow_rate_min"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_acc_divide"
+		android:text="Gyro角速率最小值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_rate"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_acc_divide"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="Gyro角速率"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_rate_max"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_acc_divide"
+		android:layout_alignParentRight="true"
+		android:text="Gyro角速率最大值"
+	/>
+    <TextView
+        android:id="@+id/text_datashow_rate_minvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_rate_min"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_rate_value"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_rate_min"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_rate_maxvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_rate_min"
+		android:layout_alignParentRight="true"
+		android:text="0.00"
+	/>
+    <TextView
+        android:id="@+id/text_gyro_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/text_datashow_rate_minvalue"
+		android:background="#696969"
+	/>
+    
+    
+    <!-- dt时间长度 -->
+    <TextView
+        android:id="@+id/text_datashow_dt_min"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_gyro_divide"
+		android:text="dt时间最小值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_dt"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_gyro_divide"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="dt时间当前值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_dt_max"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_gyro_divide"
+		android:layout_alignParentRight="true"
+		android:text="dt时间最大值"
+	/>
+    <TextView
+        android:id="@+id/text_datashow_dt_minvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_dt_min"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_dt_value"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_dt_min"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_dt_maxvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_dt_min"
+		android:layout_alignParentRight="true"
+		android:text="0.00"
+	/>
+    <TextView
+        android:id="@+id/text_dt_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/text_datashow_dt_minvalue"
+		android:background="#696969"
+	/>
+    
+    <!-- Bias陀螺偏置 -->
+    <TextView
+        android:id="@+id/text_datashow_bias_min"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_dt_divide"
+		android:text="陀螺Bias最小值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_bias"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_dt_divide"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="陀螺Bias当前值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_bias_max"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_dt_divide"
+		android:layout_alignParentRight="true"
+		android:text="陀螺Bias最大值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_bias_minvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_bias_min"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_bias_value"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_bias_min"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_bias_maxvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_bias_min"
+		android:layout_alignParentRight="true"
+		android:text="0.00"
+	/>
+    <TextView
+        android:id="@+id/text_bias_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/text_datashow_bias_minvalue"
+		android:background="#696969"
+	/>
+    
+    <!-- Kalman系数K值 -->
+    <TextView
+        android:id="@+id/text_datashow_k_min"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_bias_divide"
+		android:text="K系数最小值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_k"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_bias_divide"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="K系数当前值"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_k_max"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_bias_divide"
+		android:layout_alignParentRight="true"
+		android:text="K系数最大值"
+	/>
+    <TextView
+        android:id="@+id/text_datashow_k_minvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_k_min"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_k_value"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_k_min"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="0.00"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_k_maxvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_k_min"
+		android:layout_alignParentRight="true"
+		android:text="0.00"
+	/>
+    <TextView
+        android:id="@+id/text_k_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/text_datashow_k_minvalue"
+		android:background="#696969"
+	/>
+    
+    <!-- 优化后倾角值 -->
+    <TextView
+        android:id="@+id/text_datashow_pitch_min"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_k_divide"
+		android:text="倾角最小值"
+		android:textSize="35px"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_pitch"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_k_divide"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="倾角当前值"
+		android:textSize="35px"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_pitch_max"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_k_divide"
+		android:layout_alignParentRight="true"
+		android:text="倾角最大值"
+		android:textSize="35px"
+	/>
+    <TextView
+        android:id="@+id/text_datashow_pitch_minvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_pitch_min"
+		android:text="0.00"
+		android:textSize="35px"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_pitch_value"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_pitch_min"
+		android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+		android:text="0.00"
+		android:textSize="35px"
+	/>
+    
+    <TextView
+        android:id="@+id/text_datashow_pitch_maxvalue"
+		android:layout_width="wrap_content"
+		android:layout_height="30sp"
+		android:layout_below="@id/text_datashow_pitch_min"
+		android:layout_alignParentRight="true"
+		android:text="0.00"
+		android:textSize="35px"
+	/>
+    <TextView
+        android:id="@+id/text_pitch_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/text_datashow_pitch_minvalue"
+		android:background="#696969"
+	/>
+    
+    <TextView
+        android:id="@+id/text_target_slope_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_below="@id/text_pitch_divide"
+        android:text="待测倾角值"
+	/>
+    <EditText  
+    	android:id="@+id/edit_text_target_slope"    
+    	android:layout_width="wrap_content"   
+    	android:layout_height="wrap_content" 
+    	android:layout_below="@id/text_pitch_divide"
+    	android:layout_centerHorizontal="true"
+    	android:text="0.00"
+    /> 
+    
+    <Button
+    	android:id="@+id/btn_test_start"
+    	android:layout_width="96sp"
+    	android:layout_height="39sp"
+    	android:layout_below="@id/text_target_slope_title"
+    	android:text="开始测试"
+    />
+	<Button
+    	android:id="@+id/btn_test_stop"
+    	android:layout_width="96sp"
+    	android:layout_height="39sp"
+    	android:layout_below="@id/text_target_slope_title"
+    	android:layout_alignParentRight="true"
+    	android:text="停止测试"
+    />
+</RelativeLayout>

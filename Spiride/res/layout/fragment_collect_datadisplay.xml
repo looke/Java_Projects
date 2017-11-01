@@ -1,0 +1,183 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:orientation="vertical">
+	
+     <TextView
+        android:id="@+id/text_data_display_slopeDegreeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentLeft="true"
+        android:textSize="18sp"
+        android:height="32sp"
+        android:text="slope"
+	/>
+    
+    <TextView
+        android:id="@+id/text_data_display_slopePercentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:height="32sp"
+        android:text="slopePercent"
+	/>
+    
+    <TextView
+        android:id="@+id/text_data_display_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/text_data_display_slopeDegreeText"
+		android:background="#696969"
+	/>
+    
+    <TextView
+        android:id="@+id/text_data_display_slopeDegreeNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_data_display_slopeDegreeText"
+        android:layout_alignParentLeft="true"
+        android:textSize="66sp"
+        android:textColor="#666666"
+        android:text="--"
+	/>
+    <!--#228B22森林绿色  #FF0000红色  -->
+    <TextView
+        android:id="@+id/text_data_display_slopePercentNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_data_display_slopeDegreeText"
+        android:layout_alignParentRight="true"
+        android:textSize="66sp"
+        android:textColor="#666666"
+        android:text="--"
+	/>
+    
+   <Button
+    	android:id="@+id/btn_data_display_startupcollect"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/text_data_display_slopeDegreeNum"
+    	android:text="startupcollect"
+    />
+    
+    <Button
+    	android:id="@+id/btn_data_display_stopcollect"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/text_data_display_slopeDegreeNum"
+    	android:layout_alignParentRight="true"
+    	android:text="stopcollect"
+    />
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_divide"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+		android:layout_below="@id/btn_data_display_startupcollect"
+		android:background="#696969"
+	/>
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_divide"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="采集中的线路信息"
+	/>
+     
+    <TextView
+        android:id="@+id/text_collect_routeinfo_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_title"
+        
+        android:text="名称"
+	/>
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_start_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_title"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="起点"
+	/>
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_end_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_title"
+        android:layout_alignParentRight="true"
+        android:text="终点"
+	/>
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_name_title"
+        
+        android:text="G108"
+	/>
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_name_title"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="马召镇"
+	/>
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_name_title"
+        android:layout_alignParentRight="true"
+        android:text="黑河森林公园"
+	/>
+    
+    <TextView
+        android:id="@+id/text_collect_routeinfo_samplenumber_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/text_collect_routeinfo_name"
+        android:text="已采集点数:200"
+	/>
+    
+    <Button
+    	android:id="@+id/btn_collect_routeinfo_tag"
+    	android:layout_width="96sp"
+    	android:layout_height="46sp"
+    	android:layout_below="@id/text_collect_routeinfo_samplenumber_title"
+    	android:text="添加标签"
+    />
+	<Button
+    	android:id="@+id/btn_collect_routeinfo_stoptag"
+    	android:layout_width="96sp"
+    	android:layout_height="46sp"
+    	android:layout_below="@id/text_collect_routeinfo_samplenumber_title"
+    	android:layout_alignParentRight="true"
+    	android:text="停止添加"
+    />
+
+</RelativeLayout>

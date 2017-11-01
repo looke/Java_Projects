@@ -1,0 +1,67 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/route_add_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="线路名称"
+        
+	/>
+    <EditText  
+    	android:id="@+id/route_add_name_edit"    
+    	android:layout_width="fill_parent"   
+    	android:layout_height="wrap_content"   
+    	android:hint="请输入线路名称"
+    />
+    
+     <TextView
+        android:id="@+id/route_add_startplace_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="线路起点"
+	/>
+    <EditText  
+    	android:id="@+id/route_add_startplace_edit"    
+    	android:layout_width="fill_parent"   
+    	android:layout_height="wrap_content"   
+    	android:hint="请输入线路起点"
+    />
+    
+     <TextView
+        android:id="@+id/route_add_endplace_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="线路终点"
+	/>
+     <EditText  
+    	android:id="@+id/route_add_endplace_edit"    
+    	android:layout_width="fill_parent"   
+    	android:layout_height="wrap_content"   
+    	android:hint="请输入线路终点"
+    />
+    
+    <Button
+    	android:id="@+id/btn_route_add_submit"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_weight="12"
+    	android:text="确定"
+    />
+    
+    <Button
+    	android:id="@+id/btn_route_add_cancel"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:layout_weight="12"
+    	android:text="取消"
+    />
+    
+</LinearLayout>

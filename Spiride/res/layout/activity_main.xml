@@ -1,0 +1,55 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout  
+        android:id="@+id/content"  
+        android:layout_width="match_parent"  
+        android:layout_height="0dp"
+        android:layout_weight="3"
+         />  
+  	
+    <FrameLayout  
+        android:id="@+id/content_2"  
+        android:layout_width="match_parent"  
+        android:layout_height="0dp" 
+        android:layout_weight="1" 
+         />
+    <FrameLayout  
+        android:id="@+id/content_3"  
+        android:layout_width="match_parent"  
+        android:layout_height="0dp"  
+        android:layout_weight="8"
+         />
+    
+    <RadioGroup
+        android:id="@+id/rg_tab"  
+        android:orientation="horizontal"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_tab">  
+  
+        <RadioButton
+            android:id="@+id/rg_route_button"
+            style="@style/bottom_tab"  
+            android:textColor="@color/color_radiobutton"
+            android:text="线路管理" />  
+  
+        <RadioButton  
+            android:id="@+id/rg_collection_button"
+            style="@style/bottom_tab"  
+            android:textColor="@color/color_radiobutton"
+            android:text="数据采集" />  
+ 		
+        <RadioButton
+            android:id="@+id/rg_data_button"
+            style="@style/bottom_tab"  
+          	android:textColor="@color/color_radiobutton"
+            android:text="数据管理" /> 
+            
+    </RadioGroup>
+    
+</LinearLayout>
